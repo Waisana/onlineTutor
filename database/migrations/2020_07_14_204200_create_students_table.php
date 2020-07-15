@@ -15,19 +15,21 @@ class CreateStudentsTable extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('users_id');
-            $table->foreign('users_id')
-                ->references('id')->on('users')
-                ->onDelete('cascade');
-            $table->index('users_id'); 
-            $table->string('class_id');
-            $table->foreign('class_id')
-                ->references('id')->on('classes')
-                ->onDelete('cascade');
-            $table->index('class_id');
-            $table->string('parentnames');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')
+                  ->references('id')->on('users')
+                  ->onDelete('cascade');
+            $table->index('user_id');
+
+            $table->unsignedBigInteger('subject_id');
+            $table->foreign('subject_id')
+                  ->references('id')->on('subjects')
+                  ->onDelete('cascade');
+            $table->index('subject_id');
+
+            $table->string('parentname');
             $table->string('parentemail');
-            $table->string('parentphone');
+            $table->string('parentcontact');
             $table->timestamps();
         });
     }
