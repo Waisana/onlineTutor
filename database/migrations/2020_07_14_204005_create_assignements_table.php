@@ -4,8 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClassesTable extends Migration
-{ 
+class CreateAssignementsTable extends Migration
+{
     /**
      * Run the migrations.
      *
@@ -13,15 +13,11 @@ class CreateClassesTable extends Migration
      */
     public function up()
     {
-        Schema::create('classes', function (Blueprint $table) {
+        Schema::create('assignements', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('subject_id');
-            $table->foreign('subject_id')
-                ->references('id')->on('subjects')
-                ->onDelete('cascade');
-            $table->index('subject_id');
             $table->timestamps();
+            $table->string('datesub');
         });
     }
 
@@ -32,6 +28,6 @@ class CreateClassesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classes');
+        Schema::dropIfExists('assignements');
     }
 }

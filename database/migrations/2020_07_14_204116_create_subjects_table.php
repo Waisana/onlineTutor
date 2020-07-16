@@ -15,16 +15,17 @@ class CreateSubjectsTable extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('assign_id');
-            $table->foreign('assign_id')
-                ->references('id')->on('assignements')
-                ->onDelete('cascade');
-            $table->index('assign_id');
+            $table->string('subcode');
             $table->string('name');
-            $table->string('code');
             $table->string('notes');
             $table->string('term');
             $table->timestamps();
+            
+            $table->unsignedBigInteger('assign_id');
+            $table->foreign('assign_id')
+                  ->references('id')->on('assignements')
+                  ->onDelete('cascade');
+            $table->index('assign_id');
         });
     }
 
