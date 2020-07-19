@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="span9">
+    <div class="col-md-9">
         <div class="content">
             <div class="btn-controls">
                 <div class="btn-box-row row-fluid">
@@ -20,7 +20,7 @@
                         <div class="row-fluid">
                             <div class="span12">
                                 <a href="#" class="btn-box small span4"><i class="icon-envelope"></i><b>Notifications</b>
-                                </a><a href="#" class="btn-box small span4"><i class="icon-group"></i><b>Teachers</b>
+                                </a><a href="{{route('teachers')}}" class="btn-box small span4"><i class="icon-group"></i><b>Teachers</b>
                                 </a><a href="#" class="btn-box small span4"><i class="icon-exchange"></i><b>School Year</b>
                                 </a>
                             </div>
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <ul class="widget widget-usage unstyled span4">
+                    <ul class="widget widget-usage list-unstyled span4">
                         <li>
                             <p>
                                 <strong>2023</strong> <span class="pull-right small muted">78%</span>
@@ -112,7 +112,7 @@
                         DataTables</h3>
                 </div>
                 <div class="module-body table">
-                    <table cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display"
+                    <table cellpadding="0" cellspacing="0" class="datatable-1 table table-bordered table-striped	 display"
                         width="100%">
                         <thead>
                             <tr>
@@ -310,9 +310,6 @@
                     </table>
                 </div>
             </div>
-            <!--/.module-->
         </div>
-        <!--/.content-->
     </div>
-    <!--/.span9-->
 @endsection

@@ -1,4 +1,10 @@
 @extends('layouts.app')
 @section('content')
-    <h3>Files Page</h3>
+<div class="col-md-9">
+    <div class="content">
+        <div class="module-head">
+            <h3>Files Listing</h3>
+        </div>
+    </div>
+</div>
 @endsection
