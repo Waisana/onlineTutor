@@ -4,7 +4,7 @@
 	font-weight: normal;
 	margin: 0;
 	padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 html{
@@ -19,8 +19,6 @@ html{
 
 body { 
 	background: url(/images/index6.png) no-repeat center center fixed;
-	/*background: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/index6.png) no-repeat center center fixed;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/index6.png) no-repeat center center fixed;*/
 	-webkit-background-size: cover !important; 
 	-moz-background-size: cover !important; 
 	-o-background-size: cover !important; 
@@ -31,72 +29,81 @@ body {
   	overflow: hidden;
    
 }
-
-
-/*.main_indexBody{
-	height: 75%
-}*/
-
-.other_body{
-	display: flex;
-	flex-direction: column;
+.title-intro{
+	margin-top: 15%;
+	color: #fff ;
 }
-
-.logo {
-    /*height: 100px;*/
-    width: auto;
-    float: left;
-    margin-top: 5%
+.title-intro h1{
+	color: #fff ;
+	font-size: 350%;
 }
-
-
+.expectation{
+	margin-top: 15%;
+}
+.expectation h2, h3, p{
+	color: #fff ;
+}
 /*
-Login and sign up
+form sign in
 */
 
-.for_login{
-	margin-top: 10%;
+.form-signIn{
+	margin-top: 30%;
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 4%;
+
 
 
 }
 
-.the_login{
+.form-singUp , .form-signIn{
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 	border: 2px solid #fff;
-	margin-bottom: 4%;
-}
-
-.form-signin,.the_login form{
+	color: #fff;
 	padding: 4%;
+	
+}
+hr{
+	color: #fff;
 }
 
-.to_singnIn{
+.form-signIn{
 	display: flex;
 	flex-direction: column;
 	
 }
-.form-signin,.to_singnIn h3{
+.form-signIn h3, .form-singUp h3, hr{
 	
 	color: #fff;
-	margin-bottom: 3%;
+	
 	
 }
-.to_singnIn input{
-	margin-bottom: 3%;
+.form-signIn input{
+	
 	font-size: 110%;
 	
 }
 
-
-.the_login1{
-	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-	border: 2px solid #fff;
+.signup-buttons{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
 
-.form-signin{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+/*
+studnt register
+*/
+
+.studentR{
+	margin-top: 4%;
+
+}
+.login-button{
+	margin-left: 25%;
+}
+.login-register{
+
+	margin-left: 48%;
+
 }
