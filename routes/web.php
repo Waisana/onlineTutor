@@ -58,6 +58,14 @@ Route::get('/studentsAccounts', function () {
     return view('accounts.students');
 })->name('studentsAccounts');
 
+Route::get('/students/register', function () {
+    return view('accounts.studentsRegister');
+})->name('studentsRegister');
+
+Route::get('/teachers/register', function () {
+    return view('accounts.teachersRegister');
+})->name('teachersRegister');
+
 
 Auth::routes();
 
