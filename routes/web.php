@@ -58,6 +58,7 @@ Route::get('/studentsAccounts', function () {
     return view('accounts.students');
 })->name('studentsAccounts');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
