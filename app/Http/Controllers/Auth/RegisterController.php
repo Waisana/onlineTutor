@@ -70,7 +70,4 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    public function registerTeacher($request){
-        return $request;
-    }
 }
