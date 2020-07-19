@@ -66,6 +66,13 @@ Route::get('/teachers/register', function () {
     return view('admin.accounts.teachersRegister');
 })->name('teachersRegister');
 
+Route::get('/students/pages/', function () {
+    return view('mainpages.students.index');
+})->name('studentsPage');
+
+Route::get('/teachers/pages/', function () {
+    return view('mainpages.teachers.index');
+})->name('teachersPage');
 
 Auth::routes();
 
