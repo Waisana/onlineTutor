@@ -16,7 +16,6 @@
                             <th>Parent's Phone</th>
                             <th>Class</th>
                             <th>status</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -29,9 +28,6 @@
                             <td class="center">
                                 <button class="btn btn-small btn-primary">Activate</button>
                             </td>
-                            <td class="center">
-                                <i class="icon-trash trash-icon text-danger"></i>
-                            </td>
                         </tr>
                     </tbody>
                     <tfoot>
@@ -42,7 +38,6 @@
                             <th>Phone</th>
                             <th>Department</th>
                             <th>status</th>
-                            <th>Actions</th>
                         </tr>
                     </tfoot>
                 </table>

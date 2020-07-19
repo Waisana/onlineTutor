@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}"> 
     <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
         rel='stylesheet'>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
     {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
 
@@ -49,10 +50,5 @@
     <script src="{{ asset('scripts/flot/jquery.flot.js')}}" type="text/javascript"></script>
     <script src="{{ asset('scripts/flot/jquery.flot.resize.js')}}" type="text/javascript"></script>
     <script src="{{ asset('scripts/common.js')}}" type="text/javascript"></script>
-    <script type="text/javascript">
-$(document).ready(function() {
-  $('#months').multiselect();
-});
-    </script>
 </body>
 </html>

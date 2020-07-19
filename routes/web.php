@@ -18,6 +18,10 @@ Route::get('/dashboard', function () {
     return view('dashboard.index');
 })->name('dashboard');
 
+Route::get('/assignment', function () {
+    return view('files.assignments');
+})->name('assignment');
+
 Route::get('/teachers', function() {
     return view('teachers.index');
 })->name('teachers');

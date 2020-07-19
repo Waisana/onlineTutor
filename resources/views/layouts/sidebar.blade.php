@@ -9,7 +9,7 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{{route('assignment')}}">
                     <i class="menu-icon icon-inbox"></i>Tasks 
                     <b class="label green pull-right">12</b> 
                 </a>

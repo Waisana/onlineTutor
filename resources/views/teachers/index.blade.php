@@ -16,8 +16,7 @@
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Department</th>
-                            <th>status</th>
-                            <th>Actions</th>
+                            <th>Status/Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -28,11 +27,8 @@
                             <td class="center">0781098283</td>
                             <td class="center">Chemistry</td>
                             <td class="center">
-                                <button class="btn btn-small btn-primary">Activate</button>
-                            </td>
-                            <td class="center">
                                 <i class="icon-edit edit-icon primary" data-toggle="modal" data-target="#department"></i> | 
-                                <i class="icon-trash trash-icon text-danger"></i>
+                                <button class="btn btn-small btn-primary">Activate</button>
                             </td>
                         </tr>
                     </tbody>
@@ -43,8 +39,7 @@
                             <th>Email</th>
                             <th>Phone</th>
                             <th>Department</th>
-                            <th>status</th>
-                            <th>Actions</th>
+                            <th>Status/Action</th>
                         </tr>
                     </tfoot>
                 </table>
