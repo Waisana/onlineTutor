@@ -19,14 +19,8 @@
     <link type="text/css" href="{{ asset('css/theme.css')}}" rel="stylesheet">
     <link type="text/css" href="{{ asset('images/icons/css/font-awesome.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/custom.css')}}"> 
-    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600'
-        rel='stylesheet'>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
-    {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
-
-    <!-- Styles -->
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+    <link type="text/css" href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css" rel="stylesheet"/>
 </head>
 <body>
     <div id="app">

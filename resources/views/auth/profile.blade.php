@@ -51,28 +51,23 @@
                                         <label for="exampleInputPassword1">Second Name</label>
                                         <input type="text" class="form-control" placeholder="second name">
                                     </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Profile picture</label>
+                                        <input type="file" class="form-control" name="profile">
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
                             </div>
                             <div class="col-md-6">
                                 <form>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email address</label>
-                                        <input type="email" class="form-control" placeholder="User Name">
+                                        <input type="email" class="form-control" placeholder="Email@email.com">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" placeholder="Password">
+                                        <input type="password" class="form-control form-control-sm" placeholder="***********">
                                     </div>
-                                    <div class="form-check">
-                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="float-left btn btn-md btn-primary">Sve Changes</button>
                                 </form>
                             </div>
                         </div>

@@ -15,35 +15,35 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('/dashboard', function () {
-    return view('dashboard.index');
+    return view('admin.dashboard.index');
 })->name('dashboard');
 
 Route::get('/assignment', function () {
-    return view('files.assignments');
+    return view('admin.files.assignments');
 })->name('assignment');
 
 Route::get('/teachers', function() {
-    return view('teachers.index');
+    return view('admin.teachers.index');
 })->name('teachers');
 
 Route::get('/students', function () {
-    return view('students.index');
+    return view('admin.students.index');
 })->name('students');
 
 Route::get('/classes', function () {
-    return view('classes.index');
+    return view('admin.classes.index');
 })->name('classes');
 
 Route::get('/subjects', function () {
-    return view('subjects.index');
+    return view('admin.subjects.index');
 })->name('subjects');
 
 Route::get('/files', function () {
-    return view('files.index');
+    return view('admin.files.index');
 })->name('files');
 
 Route::get('/userLogs', function() {
-    return view('logs.index');
+    return view('admin.logs.index');
 })->name('userLogs');
 
 Route::get('/profile', function () {
@@ -51,21 +51,28 @@ Route::get('/profile', function () {
 })->name('profile');
 
 Route::get('/teacherAccounts', function () {
-    return view('accounts.teachers');
+    return view('admin.accounts.teachers');
 })->name('teacherAccounts');
 
 Route::get('/studentsAccounts', function () {
-    return view('accounts.students');
+    return view('admin.accounts.students');
 })->name('studentsAccounts');
 
 Route::get('/students/register', function () {
-    return view('accounts.studentsRegister');
+    return view('admin.accounts.studentsRegister');
 })->name('studentsRegister');
 
 Route::get('/teachers/register', function () {
-    return view('accounts.teachersRegister');
+    return view('admin.accounts.teachersRegister');
 })->name('teachersRegister');
 
+Route::get('/students/pages/', function () {
+    return view('mainpages.students.index');
+})->name('studentsPage');
+
+Route::get('/teachers/pages/', function () {
+    return view('mainpages.teachers.index');
+})->name('teachersPage');
 
 Auth::routes();
 
