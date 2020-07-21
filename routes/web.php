@@ -79,6 +79,8 @@ Route::get('/teachers/pages/', function () {
     return view('mainpages.teachers.index');
 })->name('teachersPage');
 
+Route::post("/register", "Auth\RegisterController@register");
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
