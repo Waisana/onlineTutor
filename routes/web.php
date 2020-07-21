@@ -59,11 +59,11 @@ Route::get('/studentsAccounts', function () {
 })->name('studentsAccounts');
 
 Route::get('/students/register', function () {
-    return view('admin.accounts.studentsRegister');
+    return view('auth.studentsRegister');
 })->name('studentsRegister');
 
 Route::get('/teachers/register', function () {
-    return view('admin.accounts.teachersRegister');
+    return view('auth.teachersRegister');
 })->name('teachersRegister');
 
 Route::get('/students/pages/', function () {

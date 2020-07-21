@@ -34,13 +34,11 @@
                 </div>
             </div>
         </div>
-
         <footer >
             <div class="container">
                 <div class="row">
-    
                     <div class="col-md-6 ">
-                        <div class="card bg-transparent"> 
+                        <div class="card bg-transparent">
                             <div class="card-body">
                                 <p class="simplenav">
                                     <a href="login.php">I`m a Student</a> | 
@@ -50,7 +48,6 @@
                             </div>
                         </div>  
                     </div>
-    
                     <div class="col-md-6">
                         <div class="card bg-transparent">
                             <div class="card-body">
@@ -60,14 +57,8 @@
                             </div>
                         </div> 
                     </div>
-    
                 </div>
-                <!-- /row of panels -->
             </div>
-        
         </footer>
-
     </div>
-
-   
 @endsection
