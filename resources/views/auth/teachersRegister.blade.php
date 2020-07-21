@@ -5,13 +5,14 @@
             <div class="card">
                 <div class="card-header"> Teacher Registeration</div>
                 <div class="card-body">
-                    <form class="form-horizontal" method="post" action="#">
+                    <form id="teacher-register">
+                        @csrf
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">First Name</label>
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter First Name" />
+                                    <input type="text" class="form-control" name="firstname" placeholder="Enter First Name" />
                                 </div>
                             </div>
                         </div>
@@ -20,14 +21,14 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Second Name" />
+                                    <input type="text" class="form-control" name="secondname" placeholder="Enter Second Name" />
                                 </div>
                             </div>
                         </div>
                         <div class="form-group ">
                             <label for="name" class="cols-sm-2 control-label">Gender</label>
                             <div class="cols-sm-10">
-                                <select class="form-control">
+                                <select class="form-control" name="gender">
                                     <option selected="">Male</option>
                                     <option>Female</option>
                                 </select>
@@ -38,7 +39,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Parent Email Email" />
+                                    <input type="text" class="form-control" name="parentemail" id="email" placeholder="parent@parentemail.com" />
                                 </div>
                             </div>
                         </div>
@@ -47,12 +48,12 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="phone_contact" id="phone_contact" placeholder="Enter phone contact " />
+                                    <input type="text" class="form-control" name="parentcontact" id="phone_contact" placeholder="07......" />
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group ">
-                            <button type="button" class="btn btn-primary btn-lg w-50 login-button ">Register</button>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg w-50 login-button teacher-btn">Register</button>
                         </div>
                         <div class="login-register">
                             <a href="{{route('welcome')}}">Login</a>
