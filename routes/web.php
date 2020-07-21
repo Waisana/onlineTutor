@@ -22,6 +22,11 @@ Route::get('/assignment', function () {
     return view('admin.files.assignments');
 })->name('assignment');
 
+// students assignement page
+Route::get('/students/assignments', function () {
+    return view('admin.files.assignementsstd');
+})->name('stdassignment');
+
 Route::get('/teachers', function() {
     return view('admin.teachers.index');
 })->name('teachers');

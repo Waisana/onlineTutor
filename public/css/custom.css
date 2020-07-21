@@ -13,3 +13,17 @@
 .txt-small {
 	font-size: 12px !important;
 }
+.wellNote{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.wellNote h1{
+margin-left: 25%;
+}
+.wellNote h3{
+	margin-left: 35%;
+	}
+.wellNote h4{
+	margin-left: 38%;
+	}
