@@ -65,12 +65,12 @@
                 <!-- Authentication Links -->
                 <li class="nav-item">
                     <a class="nav-link mt-3" href="{{ route('register') }}">
-                        <i class="icon-envelope"></i> Notifications
+                        <i class="icon-envelope"></i> Notifications {{Auth()->user()->type}}
                     </a>
                 </li>
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                        <img src="{{ asset('images/user.png')}}" width="40" alt="teacher Image" class="img-thumbnail">
+                        <img src={{ asset("profiles/".Auth()->user()->image) }} width="40" alt="teacher Image" class="img-thumbnail">
                     <span class="caret"></span>
                     </a>
 

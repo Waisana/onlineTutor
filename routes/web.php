@@ -10,50 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard.index');
-})->name('dashboard');
 
-Route::get('/assignment', function () {
-    return view('admin.files.assignments');
-})->name('assignment');
-
-// students assignement page
-Route::get('/students/assignments', function () {
-    return view('admin.files.assignementsstd');
-})->name('stdassignment');
-
-Route::get('/teachers', function() {
-    return view('admin.teachers.index');
-})->name('teachers');
-
-Route::get('/students', function () {
-    return view('admin.students.index');
-})->name('students');
-
-Route::get('/classes', function () {
-    return view('admin.classes.index');
-})->name('classes');
-
-Route::get('/subjects', function () {
-    return view('admin.subjects.index');
-})->name('subjects');
-
-Route::get('/files', function () {
-    return view('admin.files.index');
-})->name('files');
-
-Route::get('/userLogs', function() {
-    return view('admin.logs.index');
-})->name('userLogs');
-
-Route::get('/profile', function () {
-    return view('auth.profile');
-})->name('profile');
 
 Route::get('/teacherAccounts', function () {
     return view('admin.accounts.teachers');
@@ -79,9 +37,30 @@ Route::get('/teachers/pages/', function () {
     return view('mainpages.teachers.index');
 })->name('teachersPage');
 
-// Auth routes
+// students assignement page
+Route::get('/students/assignments', function () {
+    return view('admin.files.assignementsstd');
+})->name('stdassignment');
+
+
+
+
+Route::get('/', 'HomeController@index')->name('welcome');
+
+//Administrator routes
+Route::get('/dashboard',"AdminController@index")->name('dashboard');
+Route::get('/assignment', "AdminController@assignment")->name('assignment');
+Route::get('/teachers', "AdminController@teachers")->name('teachers');
+Route::get('/students', "AdminController@students")->name('students');
+Route::get('/classes', "AdminController@classes")->name('classes');
+Route::get('/subjects', "AdminController@subjects")->name('subjects');
+Route::get('/files', "AdminController@files")->name('files');
+Route::get('/userLogs', "AdminController@userLogs")->name('userLogs');
+Route::get('/profile', "AdminController@profile")->name('profile');
+
+// Authentication routes
 Route::post("/register", "Auth\RegisterController@register");
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
+

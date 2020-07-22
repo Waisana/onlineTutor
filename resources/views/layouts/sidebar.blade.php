@@ -1,44 +1,46 @@
 <div class="col-md-3">
     <div class="sidebar">
         <ul class="widget widget-menu list-unstyled">
-            <li class="active"><a href="{{route('dashboard')}}"><i class="menu-icon icon-dashboard"></i>Dashboard
-            </a></li>
-            <li>
-                <a href="{{route('students')}}">
-                    <i class="menu-icon icon-inbox"></i>Students
-                </a>
-            </li>
-            <li>
-                <a href="{{route('assignment')}}">
-                    <i class="menu-icon icon-inbox"></i>Tasks 
-                    <b class="label green pull-right">12</b> 
-                </a>
-            </li>
-            
+            @if((Auth()->user()->type==="Admin"))
+                <li class="active"><a href="{{route('dashboard')}}"><i class="menu-icon icon-dashboard"></i>Dashboard
+                </a></li>
+                <li>
+                    <a href="{{route('students')}}">
+                        <i class="menu-icon icon-inbox"></i>Students
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('assignment')}}">
+                        <i class="menu-icon icon-inbox"></i>Tasks 
+                        <b class="label green pull-right">12</b> 
+                    </a>
+                </li>
+            @endif
         </ul>
-        <!--/.widget-nav-->
         
         <ul class="widget widget-menu list-unstyled">
-            <li>
-                <a href="{{route('classes')}}">
-                    <i class="menu-icon icon-bullhorn"></i>Classes 
-                </a>
-            </li>
-            <li>
-                <a href="{{route('subjects')}}">
-                    <i class="menu-icon icon-bold"></i> Subjects 
-                </a>
-            </li>
-            <li>
-                <a href="{{route('files')}}">
-                    <i class="menu-icon icon-book"></i>Video/PDF Library 
-                </a>
-            </li>
-            <li>
-                <a href="{{route('userLogs')}}">
-                    <i class="menu-icon icon-paste"></i>UserLogs 
-                </a>
-            </li>
+            @if((Auth()->user()->type==="Admin"))
+                <li>
+                    <a href="{{route('classes')}}">
+                        <i class="menu-icon icon-bullhorn"></i>Classes 
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('subjects')}}">
+                        <i class="menu-icon icon-bold"></i> Subjects 
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('files')}}">
+                        <i class="menu-icon icon-book"></i>Video/PDF Library 
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('userLogs')}}">
+                        <i class="menu-icon icon-paste"></i>UserLogs 
+                    </a>
+                </li>
+            @endif
         </ul>
         <!--/.widget-nav-->
         <ul class="widget widget-menu list-unstyled">
@@ -51,8 +53,10 @@
                 </a>
                     <ul id="togglePages" class="collapse list-unstyled">
                         <li><a href="{{route('profile')}}"><i class="icon-inbox"></i>Profile </a></li>
-                        <li><a href="{{route('teacherAccounts')}}"><i class="icon-inbox"></i>Teachers </a></li>
-                        <li><a href="{{route('studentsAccounts')}}"><i class="icon-inbox"></i>Students</a></li>
+                        @if((Auth()->user()->type==="Admin"))
+                            <li><a href="{{route('teacherAccounts')}}"><i class="icon-inbox"></i>Teachers </a></li>
+                            <li><a href="{{route('studentsAccounts')}}"><i class="icon-inbox"></i>Students</a></li>
+                        @endif
                     </ul>
             </li>
             <li><a href="{{route('dashboard')}}"><i class="menu-icon icon-signout"></i>Logout </a></li>
