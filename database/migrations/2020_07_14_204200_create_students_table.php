@@ -21,15 +21,11 @@ class CreateStudentsTable extends Migration
                   ->onDelete('cascade');
             $table->index('user_id');
 
-            $table->unsignedBigInteger('subject_id');
-            $table->foreign('subject_id')
+            $table->unsignedBigInteger('class_id');
+            $table->foreign('class_id')
                   ->references('id')->on('subjects')
                   ->onDelete('cascade');
-            $table->index('subject_id');
-
-            $table->string('parentname');
-            $table->string('parentemail');
-            $table->string('parentcontact');
+            $table->index('class_id');
             $table->timestamps();
         });
     }
