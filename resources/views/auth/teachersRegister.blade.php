@@ -5,7 +5,7 @@
             <div class="card">
                 <div class="card-header"> Teacher Registeration</div>
                 <div class="card-body">
-                    <form class="form-horizontal" id="teacher-register" method="POST" action="{{ route('register') }}"> 
+                    <form class="form-horizontal" id="teacher-register" method="POST" action="{{ route('register') }}" enctype="multipart/form-data"> 
                         @csrf
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">First Name</label>
@@ -63,19 +63,19 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text" id="inputGroupFileAddon01">Upload Image</span>
+                        <div class="form-group">
+                            <label for="image" class="cols-sm-2 control-label">Profile Image</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input id="image" type="file" class="form-control @error('image') is-invalid @enderror" name="image" value="{{ old('image') }}" required>
+                                    @error('image')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                            <div class="custom-file">
-                                <input type="file" class="custom-file-input" name="image" id="image" aria-describedby="inputGroupFileAddon01">
-                                <label class="custom-file-label" for="image">Choose file</label>
-                            </div>
-                            @error('image')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="phone_contact" class="cols-sm-2 control-label">contact</label>
@@ -109,7 +109,7 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                    <input id="user_type" name="user_type" value="student" style="display: none"/>
+                                    <input id="user_type" name="user_type" value="teacher" style="display: none"/>
                                 </div>
                             </div>
                         </div>
