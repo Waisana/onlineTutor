@@ -15,12 +15,23 @@
         </div>
         <div class="col-md-4 mt-auto mb-2">
             <div class="form-signIn">
-                <form  action="" method="post" class="mb-2">
+                <form  method="POST" class="mb-2" action="{{ route('login') }}">
+                    @csrf
                     <div class="form-group ">
-                        <h3 class="mb-2 font-weight=bold"> Sign in</h3>
-                        <input type="text" class="input-block-level form-control input-lg mb-2" name="username" placeholder="Username">
-                        <input type="password" class="input-block-level form-control input-lg mb-2"  name="password" placeholder="Password" >
-                        <button name="login" class="btn btn-md " type="submit"> Sign in</button> 
+                        <h3 class="mb-2 font-weight=bold">{{ __('Login') }}</h3>
+                        <input id="email" type="email" class="input-block-level form-control input-lg mb-2 @error('email') is-invalid @enderror" value="{{ old('email') }}" name="email" placeholder="Email" autofocus>
+                        @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <input id="password" type="password" class="input-block-level form-control input-lg mb-2 @error('password') is-invalid @enderror"  name="password" placeholder="Password">
+                        @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+                        <button name="login" class="btn btn-md " type="submit">{{ __('Login') }}</button> 
                     </div>
                 </form>	
             </div>
